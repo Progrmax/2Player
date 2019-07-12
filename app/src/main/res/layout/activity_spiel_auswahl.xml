@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpielAuswahl">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="300dp"
+            android:text="Spielmodi"
+            android:layout_centerHorizontal="true"
+            android:textSize="50dp"
+            android:textColor="@android:color/black"
+
+            />
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Levelauswahl"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonOnClick2"
+
+
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unendlicher Durchlauf"
+            android:layout_marginTop="200dp"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonOnClick3"
+
+            />
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
