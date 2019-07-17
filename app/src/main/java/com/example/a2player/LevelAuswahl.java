@@ -32,7 +32,7 @@ public class LevelAuswahl extends AppCompatActivity {
     }
     public void Level3starten(View view){
 
-        Intent SpielIntent = new Intent(LevelAuswahl.this, Spiel1.class );
+        Intent SpielIntent = new Intent(LevelAuswahl.this, Spiel3.class );
         startActivity(SpielIntent);
 
     }
