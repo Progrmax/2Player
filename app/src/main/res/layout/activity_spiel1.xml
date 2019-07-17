@@ -5,43 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Spiel1"
-    android:background="@android:color/black">
+    android:background="@android:color/black"
+    android:id ="@+id/gameonescreen">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id = "@+id/l1"
             android:visibility="visible">
+
+
+            <Button
+                android:id="@+id/Spieler1Button"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:onClick="Spieler1Drückt"
+                android:rotation="-180"
+                android:text="SPIELER 1" />
 
             <TextView
                 android:textColor="@android:color/white"
                 android:id="@+id/Spieler1Score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:text="0"
                 android:rotation="-180"
                 android:visibility="visible"
                 android:textAlignment="center"
-                 />
-
-            <Button
-                android:id="@+id/Spieler1Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="150dp"
-                android:layout_weight="1"
-                android:background="@android:color/holo_orange_dark"
-                android:onClick="Spieler1Drückt"
-                android:rotation="-180"
-                android:text="SPIELER 1" />
+                />
 
             <TextView
                 android:id="@+id/AnsageTextView"
@@ -54,15 +52,57 @@
 
         </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/l2"
+        android:gravity="bottom"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/AnsageTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:id="@+id/Spieler2Score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/Spieler2Button"
+            android:layout_width="match_parent"
+            android:layout_height= "130dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:onClick="Spieler2Drückt"
+            android:text="SPIELER 2" />
+
+
+    </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l1"
             android:orientation="horizontal"
+            android:id="@+id/l2"
             android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="320dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -74,7 +114,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:rotation="-180"
-                    android:text="Drücke sobald der Bildschirm weiß wird"
+                    android:text="Drücke sobald die richtige Farbe erscheint!"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="25dp"
                     android:visibility="visible"
@@ -87,7 +127,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Drücke sobald der Bildschirm weiß wird"
+                    android:text="Drücke sobald die richtige Farbe erscheint!"
                     android:textColor="@android:color/holo_orange_dark"
                     android:textSize="25dp"
                     android:visibility="visible"
@@ -103,39 +143,5 @@
                 tools:visibility="gone" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="visible">
 
-            <TextView
-                android:id="@+id/AnsageTextView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-
-            <Button
-                android:id="@+id/Spieler2Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="150dp"
-                android:layout_weight="1"
-                android:background="@android:color/holo_orange_dark"
-                android:onClick="Spieler2Drückt"
-                android:text="SPIELER 2" />
-
-            <TextView
-                android:textColor="@android:color/white"
-                android:id="@+id/Spieler2Score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="0"
-                android:textAlignment="center"
-                android:visibility="visible" />
-        </LinearLayout>
-    </LinearLayout>
 </RelativeLayout>
