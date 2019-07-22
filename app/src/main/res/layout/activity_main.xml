@@ -3,34 +3,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <RelativeLayout
+    tools:context=".MainActivity"
+    android:background="@color/aqua">
+
+    <TextView
+        android:id="@+id/titel"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:background="@drawable/backgroundphone">
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:text="2PlayerReaktor"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/SpielstartenTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Drücke um das Spiel zu starten!"
-                android:layout_marginBottom="100dp"
-                android:layout_centerHorizontal="true"
+        <TextView
+        android:id="@+id/SpielstartenTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="250dp"
+        android:text="Hier drücken um das Spiel zu starten!"
+        android:textColor="@color/black"
 
 
-                />
-
+        />
         <Button
             android:id="@+id/PlayButton"
             android:layout_width="match_parent"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_dark"
+            android:layout_marginTop="300dp"
             android:text="Spiel starten"
+            android:background = "@drawable/roundedbutton"
             android:onClick="buttonOnClick1"
             android:textColor="@android:color/black" />
-
-        </RelativeLayout>
+        <Button
+            android:id="@+id/OptionButton"
+            android:layout_width="match_parent"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="500dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Einstellungen"
+            android:background = "@drawable/roundedbutton"
+            android:onClick="buttonOnClick2"
+            android:textColor="@android:color/black" />
     </RelativeLayout>

@@ -9,13 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Spiel3" android:screenOrientation="portrait"/>
-        <activity android:name=".Spiel2" android:screenOrientation="portrait"/>
-        <activity android:name=".Spiel1" android:screenOrientation="portrait"/>
-        <activity android:name=".UnendlicherDurchlauf" android:screenOrientation="portrait"/>
-        <activity android:name=".LevelAuswahl" android:screenOrientation="portrait"/>
-        <activity android:name=".SpielAuswahl" android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        <activity android:name=".Options"></activity>
+        <activity
+            android:name=".Spiel3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Spiel2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Spiel1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UnendlicherDurchlauf"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LevelAuswahl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SpielAuswahl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

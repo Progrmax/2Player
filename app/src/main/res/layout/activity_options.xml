@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rL1"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@color/aqua">
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Einstellungen"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Switch
+            android:id="@+id/darkmodeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Darkmode    "
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+
+            />
+
+
+        <Switch
+            android:id="@+id/Musik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="@android:color/holo_orange_dark"
+            android:text="Musik    "
+            android:layout_gravity="center"
+
+
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -3,6 +3,7 @@ package com.example.a2player;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Path;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public static int punktzahlSpieler1 = 0;
     public static int punktzahlSpieler2 = 0;
 
+    public static MediaPlayer mysound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +33,39 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
-        MediaPlayer mysound = MediaPlayer.create(this, R.raw.background);
-        mysound.start();
-
         showButtons();
 
+        mysound = MediaPlayer.create(this, R.raw.background);
+        mysound.start();
+        mysound.setLooping(true);
+
     }
+
+    @Override
+    protected void onResume() {
+        super.onStart();
+        if(Options.MusikONOFF==true){
+            mysound.start();
+        }
+    }
+
+    public static boolean SpielStop=false;
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(SpielStop==true) {
+            mysound.stop();
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        mysound.start();
+    }
+
+
 
     private void showButtons() {
         final int[] a = {0};
@@ -63,6 +93,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
+        public void buttonOnClick2(View v){
+
+            timer.cancel();
+            handler.removeMessages(0);
+            Intent SpielIntent = new Intent(MainActivity.this, Options.class );
+            startActivity(SpielIntent);
+        }
         public void buttonOnClick1(View v){
 
             timer.cancel();
@@ -72,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
 }
 
 
